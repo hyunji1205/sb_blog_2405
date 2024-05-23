@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/post")
+@RequestMapping("/templates/post")
 @RequiredArgsConstructor
 public class PostController {
     private final PostService postService;
@@ -21,6 +21,6 @@ public class PostController {
     public String list(Model model) {
         List<Post> postList = postService.getList();
         model.addAttribute("postList", postList);
-        return "post/list";
+        return "templates/post/list";
     }
 }
