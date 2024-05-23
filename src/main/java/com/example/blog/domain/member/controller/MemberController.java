@@ -7,10 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/templates/member")
+@RequestMapping("/member")
 public class MemberController {
     @GetMapping("/login")
     public String loginPage() {
-        return "templates/member/login";
+        return "member/login";
+    }
+
+    @GetMapping("/signup")
+    public String signupPage() {
+        return "member/signup";
     }
 }

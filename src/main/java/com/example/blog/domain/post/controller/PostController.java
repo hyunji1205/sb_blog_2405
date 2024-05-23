@@ -1,6 +1,5 @@
 package com.example.blog.domain.post.controller;
 
-
 import com.example.blog.domain.post.entity.Post;
 import com.example.blog.domain.post.service.PostService;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/templates/post")
+@RequestMapping("/post")
 @RequiredArgsConstructor
 public class PostController {
     private final PostService postService;
@@ -20,7 +19,9 @@ public class PostController {
     @GetMapping("/list")
     public String list(Model model) {
         List<Post> postList = postService.getList();
+
         model.addAttribute("postList", postList);
-        return "templates/post/list";
+
+        return "post/list";
     }
 }
