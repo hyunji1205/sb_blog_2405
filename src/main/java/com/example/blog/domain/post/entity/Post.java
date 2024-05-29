@@ -3,11 +3,9 @@ package com.example.blog.domain.post.entity;
 import com.example.blog.domain.member.entity.Member;
 import com.example.blog.global.jpa.BaseEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -21,4 +19,5 @@ import java.time.LocalDateTime;
 public class Post extends BaseEntity {
     private String title;
     private String content;
+    private String thumnailImg;
 }

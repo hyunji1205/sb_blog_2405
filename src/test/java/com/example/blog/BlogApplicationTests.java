@@ -8,15 +8,4 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootTest
 class BlogApplicationTests {
-	@Autowired
-	PostService postService;
-
-	@Test
-	void contextLoads() {
-		for ( int i = 0; i <= 30; i++ ) {
-			String title = String.format("제목 %d", i);
-			String content = String.format("내용 %d", i);
-			postService.create(title, content);
-		}
-	}
 }
